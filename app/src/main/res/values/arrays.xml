@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="recyclerView_data">
+        <item> 北京</item>
+        <item> 南京</item>
+        <item> 上海</item>
+        <item> 苏州</item>
+        <item> 泰州</item>
+        <item> 南通</item>
+        <item> 无锡</item>
+        <item> 安徽</item>
+        <item> 合肥</item>
+        <item> 扬州</item>
+        <item> 盐城</item>
+        <item> 纽约</item>
+        <item> 芝加哥</item>
+        <item> 旧金山</item>
+        <item> 东京</item>
+        <item> 巴黎</item>
+        <item> 伦敦</item>
+    </array>
+</resources>

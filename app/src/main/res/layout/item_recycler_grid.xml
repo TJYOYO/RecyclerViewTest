@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+
+    <TextView
+        android:id="@+id/yundan"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="2017886655"
+        style="@style/style_14p_brown"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+
+    <TextView
+        android:id="@+id/kuaidan"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="快"
+        style="@style/style_14p_brown"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+
+    <TextView
+        android:id="@+id/ksjdfk"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="432"
+        style="@style/style_14p_brown"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/ddf"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="430"
+        style="@style/style_14p_brown"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/sdfw"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="-2"
+        style="@style/style_14p_brown"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/wer"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:text="3-27"
+        style="@style/style_14p_brown"
+        android:gravity="center"/>
+</LinearLayout>
+

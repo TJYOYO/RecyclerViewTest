@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_header">
+
+    <TextView
+        android:id="@+id/yundan"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="运单号"
+        style="@style/style_14p_white"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+
+    <TextView
+        android:id="@+id/kuaidan"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="产品"
+        style="@style/style_14p_white"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+
+    <TextView
+        android:id="@+id/ksjdfk"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="开单"
+        style="@style/style_14p_white"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/ddf"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="扫描"
+        style="@style/style_14p_white"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/sdfw"
+        android:layout_width="36dp"
+        android:layout_height="60dp"
+        android:text="差异"
+        style="@style/style_14p_white"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/wer"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:text="开单时间"
+        style="@style/style_14p_white"
+        android:gravity="center"/>
+</LinearLayout>
+

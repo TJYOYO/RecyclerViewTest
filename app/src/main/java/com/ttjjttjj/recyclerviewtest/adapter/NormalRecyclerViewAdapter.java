@@ -5,11 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.ttjjttjj.recyclerviewtest.R;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -20,33 +18,72 @@ public class NormalRecyclerViewAdapter extends
 
     private Context mContext;
     private String[] titles;
+    private static final int TYPE_NORMAL =0;
+    private static final int TYPE_HEADER =1;
+    private static final int TYPE_FOOTER =2;
+    private View mHeaderView;
 
     public NormalRecyclerViewAdapter(Context context){
         this.mContext = context;
         titles= context.getResources().getStringArray(R.array.recyclerView_data);
     }
 
+    public View getHeader() {
+        return mHeaderView;
+    }
+
+    public void setHeader(View headerView){
+
+        this.mHeaderView = headerView;
+        //插入新的item
+        notifyItemInserted(0);
+    }
+
+    /**
+     * 在方法getItemViewType()中, 根据position来设置不同的view，实现添加header和footer的功能
+     * @param position
+     * @return
+     */
+    @Override
+    public int getItemViewType(int position) {
+        if(position == 0){
+            return TYPE_HEADER;
+        }
+
+        if (position == getItemCount()-1){
+            //最后一个,应该加载Footer
+            return TYPE_FOOTER;
+        }
+
+        return TYPE_NORMAL;
+    }
+
     @Override
     public NormalViewholder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        if(mHeaderView != null && viewType == TYPE_HEADER){
+            return new NormalViewholder(mHeaderView);
+        }
+
         //需要传入parent，不然item不能居中
-        return new NormalViewholder(
-                LayoutInflater.from(mContext).inflate(R.layout.item_text, parent, false));
+        View viewNormal = LayoutInflater.from(mContext).inflate(R.layout.item_recycler_grid, parent, false);
+        return new NormalViewholder(viewNormal);
     }
 
     @Override
     public void onBindViewHolder(NormalViewholder holder, int position) {
-        holder.mTextView.setText(titles[position]);
+
+        if(getItemViewType(position) == TYPE_HEADER){
+            return;
+        }
     }
 
     @Override
     public int getItemCount() {
-        return titles == null ? 0 : titles.length;
+        return mHeaderView == null ? titles.length:titles.length+1;
     }
 
     public static class NormalViewholder extends RecyclerView.ViewHolder{
-
-        @Bind(R.id.text_view)
-        TextView mTextView;
 
         public NormalViewholder(View view){
             //需要设置super

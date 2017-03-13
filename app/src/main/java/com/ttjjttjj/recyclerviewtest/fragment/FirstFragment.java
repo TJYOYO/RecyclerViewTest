@@ -1,10 +1,13 @@
 package com.ttjjttjj.recyclerviewtest.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 
+import com.ttjjttjj.recyclerviewtest.DividerItemDecoration;
 import com.ttjjttjj.recyclerviewtest.R;
 import com.ttjjttjj.recyclerviewtest.adapter.NormalRecyclerViewAdapter;
 
@@ -25,7 +28,7 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_image_main;
+        return R.layout.fragment_first;
     }
 
     @Override
@@ -40,31 +43,33 @@ public class FirstFragment extends BaseFragment {
         mRecyclerView.setLayoutManager(
                 new LinearLayoutManager(mActivity));
 
-        //相当于GridView
-//        mRecyclerView.setLayoutManager(
-//                new GridLayoutManager(mActivity, 2));
-
-        //相当于瀑布流
-//        mRecyclerView.setLayoutManager(
-//                new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL));
-
         mAdapter = new NormalRecyclerViewAdapter(mActivity);
         mRecyclerView.setAdapter(mAdapter);
 
-        //瀑布流的间隔
-//        SpacesItemDecoration decoration = new SpacesItemDecoration(16);
-//        mRecyclerView.addItemDecoration(decoration);
-//        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        /**
+         * 实现下划线
+         *
+         * 新建类DividerItemDecoration.class
+         *
+         * AppTheme加入:  <item name="android:listDivider">@drawable/item_bottom_line</item>
+         *
+         * DividerItemDecoration.VERTICAL_LIST : 这个方向要注意，如果是下划线，列表的是垂直的，不要弄错，否则出不来
+         */
+
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(
+                getActivity(), DividerItemDecoration.VERTICAL_LIST));
+
+
+        /**
+         * 加入header
+         */
+        setAdaperHeader();
     }
 
-
-
-
-
-
-
-
-
-
-
+    private void setAdaperHeader(){
+        View view = LayoutInflater.from(mActivity).inflate(R.layout.item_first_header,null);
+        mAdapter.setHeader(view);
+    }
 }

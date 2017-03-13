@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         List<String> listStr = new ArrayList<String>();
-        listStr.add("简单");
+        listStr.add("表格");
         listStr.add("瀑布流");
         listStr.add("优化");
         listStr.add("待更新");

@@ -1,7 +1,6 @@
 package com.ttjjttjj.recyclerviewtest.fragment;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -26,9 +25,9 @@ public abstract class BaseFragment extends Fragment {
      * @param context
      */
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(Activity context) {
         super.onAttach(context);
-        this.mActivity = (Activity)context;
+        this.mActivity = context;
     }
 
     @Nullable

@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import com.ttjjttjj.recyclerviewtest.R;
 import com.ttjjttjj.recyclerviewtest.adapter.FragmentAdapter;
 import com.ttjjttjj.recyclerviewtest.fragment.FirstFragment;
+import com.ttjjttjj.recyclerviewtest.fragment.FourFragment;
+import com.ttjjttjj.recyclerviewtest.fragment.ThirdFragment;
 import com.ttjjttjj.recyclerviewtest.fragment.WaterFallFragment;
 
 import java.util.ArrayList;
@@ -59,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         List<Fragment> fragments = new ArrayList<Fragment>();
         fragments.add(new FirstFragment());
         fragments.add(new WaterFallFragment());
-        fragments.add(new FirstFragment());
-        fragments.add(new FirstFragment());
+        fragments.add(new ThirdFragment());
+        fragments.add(new FourFragment());
 
         mFragmentAdapter = new FragmentAdapter(
                 getSupportFragmentManager(), fragments,listStr);

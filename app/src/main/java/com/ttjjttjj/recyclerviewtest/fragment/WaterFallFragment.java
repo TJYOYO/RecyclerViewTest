@@ -13,6 +13,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ttjjttjj.recyclerviewtest.R;
 import com.ttjjttjj.recyclerviewtest.adapter.WaterFallAdapter;
+import com.ttjjttjj.recyclerviewtest.base.BaseFragment;
 import com.ttjjttjj.recyclerviewtest.bean.ImageBean;
 
 import org.json.JSONArray;
@@ -31,7 +32,7 @@ import butterknife.ButterKnife;
  *
  * 接口来自抓包的网页客户端接口
  */
-public class WaterFallFragment extends BaseFragment{
+public class WaterFallFragment extends BaseFragment {
 
     @Bind(R.id.recycler_view)
     RecyclerView mRecyclerView;

@@ -10,6 +10,7 @@ import android.view.View;
 import com.ttjjttjj.recyclerviewtest.DividerItemDecoration;
 import com.ttjjttjj.recyclerviewtest.R;
 import com.ttjjttjj.recyclerviewtest.adapter.NormalRecyclerViewAdapter;
+import com.ttjjttjj.recyclerviewtest.base.BaseFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <!-- 实现了只有left，top，right的边框, 底部不需要 -->
+    <!-- 实现了只有left，top，right的3面边框, 底部不需要 -->
 
     <item>
         <shape android:shape="rectangle" >

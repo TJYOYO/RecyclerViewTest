@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 
 import com.ttjjttjj.recyclerviewtest.R;
 
-import butterknife.ButterKnife;
-
 /**
  * Created by Administrator on 2016/5/30 0030.
  */
@@ -25,6 +23,7 @@ public class NormalRecyclerViewAdapter extends
 
     public NormalRecyclerViewAdapter(Context context){
         this.mContext = context;
+        //假数据的数组
         titles= context.getResources().getStringArray(R.array.recyclerView_data);
     }
 
@@ -62,7 +61,9 @@ public class NormalRecyclerViewAdapter extends
     public NormalViewholder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         if(mHeaderView != null && viewType == TYPE_HEADER){
-            return new NormalViewholder(mHeaderView);
+            //需要传入parent，不然item不能居中
+//            return new NormalViewholder(mHeaderView);
+            return new NormalViewholder(LayoutInflater.from(mContext).inflate(R.layout.item_first_header, parent, false));
         }
 
         //需要传入parent，不然item不能居中
@@ -88,7 +89,7 @@ public class NormalRecyclerViewAdapter extends
         public NormalViewholder(View view){
             //需要设置super
             super(view);
-            ButterKnife.bind(this, view);
+//            ButterKnife.bind(this, view);
         }
     }
 

@@ -12,6 +12,8 @@ import android.view.View;
 
 /**
  * Created by Administrator on 2017/3/10 0010.
+ *
+ * 支持recyclerview的下划线的类
  */
 
 public class DividerItemDecoration  extends RecyclerView.ItemDecoration {

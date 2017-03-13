@@ -65,7 +65,7 @@
         android:background="#000000"/>
     <TextView
         android:id="@+id/wer"
-        android:layout_width="64dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="3-27"
         style="@style/style_14p_brown"

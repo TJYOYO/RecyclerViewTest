@@ -1,4 +1,4 @@
-package com.ttjjttjj.recyclerviewtest.fragment;
+package com.ttjjttjj.recyclerviewtest.base;
 
 import android.app.Activity;
 import android.os.Bundle;

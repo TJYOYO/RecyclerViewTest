@@ -1,7 +1,9 @@
 # RecyclerViewTest
 RecyclerView 实践学习的demo，其中有基本的，瀑布流，进阶的，等等
-一：表格的实现
-最总效果:
+
+##一：表格的实现
+
+最终效果:
 
 ![device-2017-03-13-135723.png](http://upload-images.jianshu.io/upload_images/909565-bcb18dd085671ac7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -119,7 +121,6 @@ private void setAdaperHeader(){
         mAdapter.setHeader(view);
     }
 ```
-**遇到的坑：**
 
 ####坑1：布局中的文字不能居中
 
@@ -154,6 +155,6 @@ if(mHeaderView != null && viewType == TYPE_HEADER){
 好了，到这里基本弄完了，有问题的欢迎留言，谢谢！
 github地址：https://github.com/George-Soros/RecyclerViewTest
 
-2：瀑布流的截图, 其中图片的数据，来自抓包网易客户端美女图片的接口获取到的
+##2：瀑布流的截图, 其中图片的数据，来自抓包网易客户端美女图片的接口获取到的
 
 ![image](https://github.com/George-Soros/RecyclerViewTest/blob/master/shot-img.jpg)
